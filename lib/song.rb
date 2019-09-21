@@ -17,7 +17,7 @@ class Song
     artist_name = a[0]
     song_name = a[1]
     song = Song.new(song_name)
-    song_new.artist = artist_name
+    song.artist = artist_name
     song_new
   end
 
