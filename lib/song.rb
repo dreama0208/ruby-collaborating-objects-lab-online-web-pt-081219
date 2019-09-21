@@ -17,8 +17,7 @@ class Song
     artist_name = a[0]
     song_name = a[1]
     song = Song.new(song_name)
-    song.artist = artist_name
-    song_new
+    artist = Artist.find_or_create_by_name(artist_name)
   end
 
   def artist_name=(name)
