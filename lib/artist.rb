@@ -14,6 +14,7 @@ class Artist
     @@all << self
     self
   end
+
   def self.all
     @@all
   end
@@ -29,9 +30,9 @@ class Artist
 
   def self.find_or_create_by_name(name)
     if(self.name.nil?)
-      Artist.new(name)
+      Artist.new(name).save
     else
-      self.all.find {|artist| artist.name == name}
+      self.all.detect {|artist| artist.name == name}
     end
     self
   end
