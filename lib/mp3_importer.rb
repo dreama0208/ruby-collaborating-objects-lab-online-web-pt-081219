@@ -1,9 +1,10 @@
 class MP3Importer
 
-  attr_accessor :path
+  attr_accessor :path, :files
 
   def initialize(path)
     @path = path
+    @files = Dir.entries(path).grep(/\S+.mp3/)
   end
 
   def files
@@ -11,6 +12,6 @@ class MP3Importer
   end
 
   def import
-
+    Dir
   end
 end
