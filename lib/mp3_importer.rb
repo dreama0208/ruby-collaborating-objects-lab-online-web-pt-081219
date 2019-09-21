@@ -7,11 +7,7 @@ class MP3Importer
     @files = Dir.entries(path).grep(/\S+.mp3/)
   end
 
-  def files
-
-  end
-
   def import
-    Dir
+    @files.each{ |file| Song.new_by_filename(file)}
   end
 end
